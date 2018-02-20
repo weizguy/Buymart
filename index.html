@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Buymart</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="myMove()">
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+	<span style="color:lightblue;font-size:30px;cursor:pointer; margin-left:20px;" onclick="toggleNav()">&#9776; </span><span style="font-size:30px;font-weight:bold;cursor:pointer; margin-left:20px;" onclick="toggleNav()">Buymart</span>
+</nav>
+
+<div id="mySidenav" class="sidenav">
+  <a href="#">Home</a>
+  <a href="#" id="selected" onClick="myMove()">Market</a>
+  <a href="#">Help</a>
+</div>
+
+<!-- main form with animation with items pulled from json -->
+<div class="main">
+	<div id="animate">
+		<div class="item" id="item0"></div>
+		<div class="item" id="item1"></div>
+		<div class="item" id="item2"></div>
+		<p>All products come with a 30-day money back guarantee.</p>
+	</div>
+</div>
+
+<!-- ship form after buy button is picked -->
+<div class="ship">
+	<div id="shipItem"></div>
+
+	<div id="shipForm">
+		<form id="valForm">
+		  <input type="text" class="form-control" id="name" name="name" placeholder="Name"><br>
+		  <input type="text" class="form-control" id="street" name="street" placeholder="Street"><br>
+			<input type="text" class="form-control" id="city" name="city" placeholder="City"><br>
+			<select class="form-control" id="state" name="state" onChange="priceCheck($('#state').val())">
+								<option value="">State</option>
+                <option value="AL">AL</option>
+                <option value="AK">AK</option>
+                <option value="AZ">AZ</option>
+                <option value="AR">AR</option>
+                <option value="CA">CA</option>
+                <option value="CO">CO</option>
+                <option value="CT">CT</option>
+                <option value="DE">DE</option>
+                <option value="DC">DC</option>
+                <option value="FL">FL</option>
+                <option value="GA">GA</option>
+                <option value="HI">HI</option>
+                <option value="ID">ID</option>
+                <option value="IL">IL</option>
+                <option value="IN">IN</option>
+                <option value="IA">IA</option>
+                <option value="KS">KS</option>
+                <option value="KY">KY</option>
+                <option value="LA">LA</option>
+                <option value="ME">ME</option>
+                <option value="MD">MD</option>
+                <option value="MA">MA</option>
+                <option value="MI">MI</option>
+                <option value="MN">MN</option>
+                <option value="MS">MS</option>
+                <option value="MO">MO</option>
+                <option value="MT">MT</option>
+                <option value="NE">NE</option>
+                <option value="NV">NV</option>
+                <option value="NH">NH</option>
+                <option value="NJ">NJ</option>
+                <option value="NM">NM</option>
+                <option value="NY">NY</option>
+                <option value="NC">NC</option>
+                <option value="ND">ND</option>
+                <option value="OH">OH</option>
+                <option value="OK">OK</option>
+                <option value="OR">OR</option>
+                <option value="PA">PA</option>
+                <option value="RI">RI</option>
+                <option value="SC">SC</option>
+                <option value="SD">SD</option>
+                <option value="TN">TN</option>
+                <option value="TX">TX</option>
+                <option value="UT">UT</option>
+                <option value="VT">VT</option>
+                <option value="VA">VA</option>
+                <option value="WA">WA</option>
+                <option value="WV">WV</option>
+                <option value="WI">WI</option>
+                <option value="WY">WY</option>
+      </select><br>
+			<input type="text" class="form-control" id="zip" name="zip" placeholder="Zip Code">
+			<br><br>
+			<button class="btn btn-success" onClick="confirm()">Confirm</button>
+		</form>
+	</div>
+</div>
+
+<!-- done screen to say thank you -->
+<div class="done">
+	<div>
+		<p>Thank you for shopping at Buymart - have a nice day!</p>
+	</div>
+</div>
+
+<script src="js/code.js"></script>
+</body>
+</html>

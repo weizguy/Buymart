@@ -1,0 +1,33 @@
+
+[
+    {
+   		"sku": "cansynapse51",
+   		"name": "Cannondale",
+   		"price": 899.99,
+   		"features": [
+              			"DuraAce Di2",
+                    "Disc Brakes",
+                    "Carbon Frame"
+                    ]
+	},
+	{
+   		"sku": "trekdomane52",
+   		"name": "Trek",
+   		"price": 949.99,
+   		"features": [
+              			"Fast!",
+                    "Aerodynamic",
+                    "Bontrager"
+                    ]
+	},
+	{
+   		"sku": "pinadogma54",
+   		"name": "Pinarello",
+   		"price": 795.99,
+   		"features": [
+              			"Light Frame",
+                    "Think2 system",
+                    "RAD System"
+                    ]
+	}
+]
