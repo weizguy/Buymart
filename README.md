@@ -7,7 +7,7 @@ Simple coding challenge to build a store with three items
 - used external and inline css
 
 ## How to run it
-- either go to http://www.sshado.com/Buymart
+- either go to http://www.sshado.com/buymart
 - or clone repo to local machine and open browser
 
 ## Design choices
